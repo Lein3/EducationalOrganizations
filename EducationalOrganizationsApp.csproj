@@ -1,0 +1,259 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{CC4E710F-B9C0-45E9-A3E8-59850FEE21C9}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>EducationalOrganizationsApp</RootNamespace>
+    <AssemblyName>EducationalOrganizationsApp</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="Guna.UI2, Version=2.0.2.3, Culture=neutral, PublicKeyToken=e4b9cdd7b4cde4b4, processorArchitecture=MSIL">
+      <HintPath>packages\Guna.UI2.WinForms.2.0.2.3\lib\net40\Guna.UI2.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Directors.cs">
+      <DependentUpon>ModelEducationalOrganizations.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Directors\Directors_Create.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Directors\Directors_Create.Designer.cs">
+      <DependentUpon>Directors_Create.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Directors\Directors_Update.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Directors\Directors_Update.Designer.cs">
+      <DependentUpon>Directors_Update.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ModelEducationalOrganizations.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ModelEducationalOrganizations.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ModelEducationalOrganizations.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ModelEducationalOrganizations.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ModelEducationalOrganizations.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ModelEducationalOrganizations.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Organizations.cs">
+      <DependentUpon>ModelEducationalOrganizations.tt</DependentUpon>
+    </Compile>
+    <Compile Include="OtherForms\LoadingForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="OtherForms\LoadingForm.Designer.cs">
+      <DependentUpon>LoadingForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OtherForms\MailingForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="OtherForms\MailingForm.Designer.cs">
+      <DependentUpon>MailingForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Organizations\Organizations_Create.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Organizations\Organizations_Create.Designer.cs">
+      <DependentUpon>Organizations_Create.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Organizations\Organizations_Read.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Organizations\Organizations_Read.Designer.cs">
+      <DependentUpon>Organizations_Read.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Organizations\Organizations_Update.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Organizations\Organizations_Update.Designer.cs">
+      <DependentUpon>Organizations_Update.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OtherForms\StartForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="OtherForms\StartForm.Designer.cs">
+      <DependentUpon>StartForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="OtherForms\Settings.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="OtherForms\Settings.Designer.cs">
+      <DependentUpon>Settings.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Regions.cs">
+      <DependentUpon>ModelEducationalOrganizations.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Types.cs">
+      <DependentUpon>ModelEducationalOrganizations.tt</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Directors\Directors_Create.resx">
+      <DependentUpon>Directors_Create.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Directors\Directors_Update.resx">
+      <DependentUpon>Directors_Update.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OtherForms\LoadingForm.resx">
+      <DependentUpon>LoadingForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OtherForms\MailingForm.resx">
+      <DependentUpon>MailingForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Organizations\Organizations_Create.resx">
+      <DependentUpon>Organizations_Create.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Organizations\Organizations_Read.resx">
+      <DependentUpon>Organizations_Read.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Organizations\Organizations_Update.resx">
+      <DependentUpon>Organizations_Update.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OtherForms\StartForm.resx">
+      <DependentUpon>StartForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EntityDeploy Include="ModelEducationalOrganizations.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>ModelEducationalOrganizations.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="ModelEducationalOrganizations.edmx.diagram">
+      <DependentUpon>ModelEducationalOrganizations.edmx</DependentUpon>
+    </None>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\search.png" />
+    <None Include="Resources\iconPrev.png" />
+    <None Include="Resources\iconNext.png" />
+    <None Include="Resources\user %285%29.png" />
+    <None Include="Resources\person %281%29.png" />
+    <None Include="Resources\dashboard %2812%29.png" />
+    <None Include="Resources\chat %281%29.png" />
+    <None Include="Resources\5400.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="Microsoft.Office.Core">
+      <Guid>{2DF8D04C-5BFA-101B-BDE5-00AA0044DE52}</Guid>
+      <VersionMajor>2</VersionMajor>
+      <VersionMinor>8</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="Microsoft.Office.Interop.Excel">
+      <Guid>{00020813-0000-0000-C000-000000000046}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>9</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="VBIDE">
+      <Guid>{0002E157-0000-0000-C000-000000000046}</Guid>
+      <VersionMajor>5</VersionMajor>
+      <VersionMinor>3</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="ModelEducationalOrganizations.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>ModelEducationalOrganizations.edmx</DependentUpon>
+      <LastGenOutput>ModelEducationalOrganizations.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="ModelEducationalOrganizations.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>ModelEducationalOrganizations.edmx</DependentUpon>
+      <LastGenOutput>ModelEducationalOrganizations.cs</LastGenOutput>
+    </Content>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
