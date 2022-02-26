@@ -10,6 +10,14 @@
     <Property Name="MiddleName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
     <NavigationProperty Name="Organizations" Relationship="Self.FK_Organisations_Directors" FromRole="Directors" ToRole="Organizations" />
   </EntityType>
+  <EntityType Name="Mailing">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Email" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Password" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+  </EntityType>
   <EntityType Name="Organizations">
     <Key>
       <PropertyRef Name="ID" />
@@ -36,6 +44,16 @@
     <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
     <Property Name="Name" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
     <NavigationProperty Name="Organizations" Relationship="Self.FK_Organisations_Regions" FromRole="Regions" ToRole="Organizations" />
+  </EntityType>
+  <EntityType Name="sysdiagrams">
+    <Key>
+      <PropertyRef Name="diagram_id" />
+    </Key>
+    <Property Name="name" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="principal_id" Type="Int32" Nullable="false" />
+    <Property Name="diagram_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="version" Type="Int32" />
+    <Property Name="definition" Type="Binary" MaxLength="Max" FixedLength="false" />
   </EntityType>
   <EntityType Name="Types">
     <Key>
@@ -83,8 +101,10 @@
   </Association>
   <EntityContainer Name="EducationalOrganizationsEntities" annotation:LazyLoadingEnabled="true">
     <EntitySet Name="Directors" EntityType="Self.Directors" />
+    <EntitySet Name="Mailing" EntityType="Self.Mailing" />
     <EntitySet Name="Organizations" EntityType="Self.Organizations" />
     <EntitySet Name="Regions" EntityType="Self.Regions" />
+    <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" />
     <EntitySet Name="Types" EntityType="Self.Types" />
     <AssociationSet Name="FK_Organisations_Directors" Association="Self.FK_Organisations_Directors">
       <End Role="Directors" EntitySet="Directors" />

@@ -26,8 +26,10 @@ namespace EducationalOrganizationsApp
         }
     
         public virtual DbSet<Directors> Directors { get; set; }
+        public virtual DbSet<Mailing> Mailing { get; set; }
         public virtual DbSet<Organizations> Organizations { get; set; }
         public virtual DbSet<Regions> Regions { get; set; }
+        public virtual DbSet<sysdiagrams> sysdiagrams { get; set; }
         public virtual DbSet<Types> Types { get; set; }
     }
 }

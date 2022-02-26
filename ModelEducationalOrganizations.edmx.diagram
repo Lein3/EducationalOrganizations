@@ -4,10 +4,12 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="a1f023419d43425aac4e5aa1cf3acb76" Name="Diagram1">
+      <Diagram DiagramId="b1b73e9f57994674a83d4d1acaa0d404" Name="Diagram1">
         <EntityTypeShape EntityType="EducationalOrganizationsModel.Directors" Width="1.5" PointX="0.75" PointY="3.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="EducationalOrganizationsModel.Mailing" Width="1.5" PointX="5.75" PointY="2.25" IsExpanded="true" />
         <EntityTypeShape EntityType="EducationalOrganizationsModel.Organizations" Width="1.5" PointX="3" PointY="2.5" IsExpanded="true" />
         <EntityTypeShape EntityType="EducationalOrganizationsModel.Regions" Width="1.5" PointX="0.75" PointY="6.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="EducationalOrganizationsModel.sysdiagrams" Width="1.5" PointX="2.75" PointY="7.25" IsExpanded="true" />
         <EntityTypeShape EntityType="EducationalOrganizationsModel.Types" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
         <AssociationConnector Association="EducationalOrganizationsModel.FK_Organisations_Directors" ManuallyRouted="false" />
         <AssociationConnector Association="EducationalOrganizationsModel.FK_Organisations_Regions" ManuallyRouted="false" />
